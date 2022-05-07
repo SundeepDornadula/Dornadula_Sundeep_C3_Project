@@ -88,4 +88,13 @@ class RestaurantTest{
 
     }
 
+
+    @Test
+    public void check_current_time_is_returning_the_latest_time_till_seconds()
+    {
+        assertEquals(LocalTime.now().toSecondOfDay(),restaurant.getCurrentTime().toSecondOfDay());
+    }
+
+
+   
 }

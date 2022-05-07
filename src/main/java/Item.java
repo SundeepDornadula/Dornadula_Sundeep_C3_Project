@@ -1,5 +1,10 @@
 public class Item {
     private String name;
+
+    public int getPrice() {
+        return price;
+    }
+
     private int price;
 
     public Item(String name, int price) {
@@ -10,6 +15,8 @@ public class Item {
     public String getName() {
         return name;
     }
+
+
     @Override
     public String toString(){
         return  name + ":"
