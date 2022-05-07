@@ -8,6 +8,7 @@ import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalTime;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -74,4 +75,17 @@ class RestaurantTest{
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+    @Test
+    public void total_cost_of_the_selected_items_in_menu(){
+
+        List<String> itemsSelected=new ArrayList();
+        itemsSelected.add("Sweet corn soup");
+        itemsSelected.add("Vegetable lasagne");
+
+        assertEquals((119+269),restaurant.displayTotal(itemsSelected));
+
+    }
+
 }

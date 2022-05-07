@@ -70,4 +70,9 @@ public class Restaurant {
         return name;
     }
 
+    public int displayTotal(List<String> itemnames)
+    {
+        return 0;
+    }
+
 }
